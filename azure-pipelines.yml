@@ -26,4 +26,4 @@ steps:
       git config --global user.name "gingy"
       git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
       git remote add forgit https://$(GithubPAT)@github.com/gingyuan/TestSync.git
-      git branch -r | grep -v '\->' |  while read remote; do git -c "" push -u forgit "${remote#origin/}"; done
+      git branch -r | grep -v '\->' |  while read remote; do git push -u forgit "${remote#origin/}"; done
